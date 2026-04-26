@@ -2,167 +2,93 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Скачать VPN | Бесплатно и безопасно</title>
-
-  <!-- 1) СКРИПТ INPAGE (из предыдущих инструкций) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Скачать VPN | Бесплатно</title>
+  
+  <!-- Твои рекламные скрипты (они не влияют на кнопку) -->
   <script async src="https://mbvndrct.site/code/inpage/?js=ek6XmCh5ZAZJ735tbt978zRwTe6XfD_ACoMK1xyBgPy3N6NBFbT4FtM4_WZcvbuS3TouHXSdgFuZIeI68-gTtO75U44Q3Zp0y8iuZ32P2ec"></script>
-
-  <!-- 2) ПОПАНДЕР / POPUP (свежий скрипт, который ты добавил) -->
   <script async src="https://mbvnjs.online/code/pop?data=tAFITYWctYmtgpRnZIn5UHgeSbWpUN1J_M3LJxoXdsnV_LYXARrgrfnddgRQgreQLWNDcOhoteIidDMcizrklAaDvfMOcurNS8GHwvvaIvJ9VAn3yw8wzpLR_LNTlx2k"></script>
-
-  <!-- Основные стили (оформление) -->
+  
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: linear-gradient(135deg, #0a0f1e 0%, #0c1222 100%);
-      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: linear-gradient(135deg, #0a0f1e, #0c1222);
+      font-family: 'Segoe UI', Roboto, sans-serif;
       min-height: 100vh;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 1.5rem;
-    }
-
-    .page-container {
-      width: 100%;
-      max-width: 560px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    /* Баннерный слот (mbvn-bnnr) */
-    .banner-wrapper {
-      width: 100%;
-      display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
+      padding: 20px;
     }
-
-    .banner-slot {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .container {
+      max-width: 550px;
       width: 100%;
-      min-height: 270px;
-      background: rgba(0, 0, 0, 0.2);
-      border-radius: 20px;
-      backdrop-filter: blur(4px);
     }
-
-    .banner-slot > *,
-    .banner-slot mbvn-bnnr,
-    .banner-slot iframe,
-    .banner-slot ins,
-    .banner-slot div {
-      margin: 0 auto !important;
-      display: block !important;
-      text-align: center !important;
-    }
-
-    /* Карточка */
     .card {
-      width: 100%;
       background: rgba(18, 25, 40, 0.85);
       backdrop-filter: blur(10px);
       border-radius: 2rem;
-      border: 1px solid rgba(72, 187, 255, 0.25);
-      box-shadow: 0 25px 45px rgba(0, 0, 0, 0.6);
-      padding: 2rem 1.8rem 2.2rem;
+      border: 1px solid rgba(72, 187, 255, 0.3);
+      padding: 2rem;
       text-align: center;
+      margin-bottom: 1.5rem;
     }
-
     h1 {
-      font-size: 2.1rem;
-      font-weight: 700;
+      font-size: 2rem;
       background: linear-gradient(120deg, #c0e0ff, #4a9eff);
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
-      margin-bottom: 0.5rem;
     }
-
     .sub {
-      font-size: 0.9rem;
       color: #8fafcf;
-      margin-bottom: 1.8rem;
       border-bottom: 1px dashed #2a3850;
       display: inline-block;
       padding-bottom: 0.3rem;
+      margin: 1rem 0;
     }
-
     .shield {
       display: flex;
       justify-content: center;
       gap: 1rem;
-      margin: 0.5rem 0 1.2rem;
-      color: #3d7eb3;
-      font-size: 0.8rem;
+      margin: 1rem 0;
       flex-wrap: wrap;
     }
-
     .shield span {
       background: #101826;
-      padding: 0.2rem 0.9rem;
+      padding: 0.2rem 0.8rem;
       border-radius: 40px;
       border: 0.5px solid #2a3c5a;
+      color: #bdd4f0;
+      font-size: 0.8rem;
     }
-
     .desc {
       color: #bdd4f0;
-      margin: 1.2rem 0 1rem;
-      font-size: 0.95rem;
+      margin: 1rem 0;
     }
-
-    /* Кнопка с обратным отсчётом */
-    .btn-download {
+    .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 12px;
+      gap: 10px;
       background: linear-gradient(95deg, #0f5fcf, #0a3a7a);
-      padding: 1rem 2rem;
       width: 100%;
+      padding: 1rem;
       border-radius: 60px;
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       font-weight: bold;
       color: white;
-      text-decoration: none;
-      transition: 0.2s;
-      box-shadow: 0 8px 18px rgba(0, 20, 50, 0.5);
-      border: 1px solid rgba(255, 255, 255, 0.18);
+      border: none;
       cursor: pointer;
-      margin: 0.75rem 0 0.5rem;
-      text-align: center;
+      transition: 0.2s;
     }
-
-    .btn-download:active {
-      transform: scale(0.97);
-    }
-
-    /* Состояние кнопки во время отсчёта */
-    .btn-download.disabled {
+    .btn:active { transform: scale(0.98); }
+    .btn.disabled {
       background: #3a5a7a;
       cursor: not-allowed;
       opacity: 0.6;
       pointer-events: none;
     }
-
-    .btn-icon {
-      width: 26px;
-      height: 26px;
-      filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2));
-    }
-
     .warning {
       background: #0c1422b3;
       border-radius: 20px;
@@ -171,172 +97,107 @@
       color: #8da3c9;
       margin-top: 1rem;
     }
-
-    .footer-note {
-      font-size: 0.7rem;
-      color: #5e7492;
-      margin-top: 1.8rem;
-      border-top: 1px solid #1e2a3e;
-      padding-top: 1.3rem;
+    .banner-slot {
+      background: rgba(0,0,0,0.2);
+      border-radius: 20px;
+      min-height: 270px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-
-    @media (max-width: 550px) {
-      body { padding: 1rem; }
-      .card { padding: 1.5rem 1.2rem; }
-      h1 { font-size: 1.8rem; }
-      .btn-download { font-size: 1.2rem; padding: 0.75rem 1rem; }
-    }
-
     mbvn-bnnr {
-      display: flex !important;
-      justify-content: center !important;
-      width: 100% !important;
+      display: block;
+      margin: 0 auto;
     }
-
-    .page-container, body {
-      overflow-x: hidden;
+    @media (max-width: 550px) {
+      .card { padding: 1.5rem; }
+      .btn { font-size: 1.1rem; }
     }
   </style>
 </head>
 <body>
-<div class="page-container">
-
-  <!-- КАРТОЧКА С VPN -->
+<div class="container">
   <div class="card">
     <h1>⚡ VPN Free</h1>
     <div class="sub">анлим доступ • без логов</div>
     <div class="shield">
-      <span>🔒 Полная безопасность</span>
+      <span>🔒 Безопасность</span>
       <span>🌍 70+ стран</span>
-      <span>🚀 no speed limits</span>
+      <span>🚀 Без лимитов</span>
     </div>
     <div class="desc">
-      Нажмите кнопку, чтобы получить актуальную сборку VPN.<br>
-      <strong>• Полностью бесплатно •</strong>
+      Нажмите кнопку, подождите 10 секунд — и скачивание начнётся.
     </div>
-
-    <!-- Кнопка с обратным отсчётом:
-         Обрати внимание — href="#" ставим временно, реальный переход будет после таймера через JS -->
-    <a id="downloadBtn" href="#" class="btn-download" data-real-link="https://wdfiles.ru/3wOrs">
-      <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    
+    <!-- Кнопка НЕ ссылка, а просто кнопка (без href) -->
+    <button id="downloadBtn" class="btn">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
         <polyline points="7 10 12 15 17 10" />
         <line x1="12" y1="15" x2="12" y2="3" />
       </svg>
       <span id="btnText">Скачать VPN</span>
-    </a>
-
-    <div class="warning">⚡ ссылка всегда рабочая — файл обновляется автоматически.</div>
-    <div class="footer-note">Никаких регистраций.</div>
+    </button>
+    
+    <div class="warning">⚡ Ссылка обновляется автоматически. После таймера начнётся загрузка.</div>
   </div>
-
-  <!-- БАННЕРНЫЙ СЛОТ (один, как ты хотел) -->
-  <div class="banner-wrapper">
-    <div class="banner-slot" id="singleBanner">
-      <mbvn-bnnr data-size="300x250"></mbvn-bnnr>
-    </div>
+  
+  <!-- Баннерный слот -->
+  <div class="banner-slot">
+    <mbvn-bnnr data-size="300x250"></mbvn-bnnr>
   </div>
-
 </div>
 
-<!-- 3) БАННЕРНЫЙ СКРИПТ (один, который наполняет <mbvn-bnnr>) -->
+<!-- Баннерный скрипт -->
 <script defer src="https://mbvndrct.site/code/banner?secret=IVJFqS5CbvNG1LWm"></script>
 
-<!-- ДОП. СТИЛИ ДЛЯ ЦЕНТРИРОВКИ БАННЕРА -->
-<style>
-  .banner-slot > *,
-  .banner-slot mbvn-bnnr,
-  .banner-slot iframe,
-  .banner-slot ins,
-  .banner-slot div[style],
-  .banner-slot img {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    display: block !important;
-    text-align: center !important;
-    position: relative !important;
-    left: auto !important;
-    right: auto !important;
-  }
-  mbvn-bnnr {
-    display: flex !important;
-    justify-content: center !important;
-    width: 100% !important;
-  }
-</style>
-
 <script>
+  // Жёсткая реализация таймера на 10 секунд
   (function() {
-    // Получаем элементы кнопки и текста внутри неё
     const btn = document.getElementById('downloadBtn');
-    const btnTextSpan = document.getElementById('btnText');
+    const btnText = document.getElementById('btnText');
+    const realLink = 'https://wdfiles.ru/3wOrs';  // твоя ссылка на файл
     
-    // Ссылка на реальный файл лежит в data-атрибуте
-    const realLink = btn.getAttribute('data-real-link');
-    
-    // Флаг, чтобы таймер запускался только один раз
-    let timerActive = false;
     let countdown = 10;
-    let intervalId = null;
-
-    // Функция запуска отсчёта
-    function startCountdown(event) {
-      if (timerActive) return;        // уже идёт таймер
-      if (countdown !== 10) return;   // вдруг уже отсчитали
+    let timerRunning = false;
+    let interval = null;
+    
+    function startTimer() {
+      if (timerRunning) return;
+      timerRunning = true;
+      btn.classList.add('disabled');
       
-      // Отменяем стандартное поведение (переход по #)
-      event.preventDefault();
-      
-      timerActive = true;
-      btn.classList.add('disabled');   // делаем кнопку серой / неактивной
-      
-      // Меняем текст на обратный отсчёт
-      function updateTimerDisplay() {
-        if (btnTextSpan) {
-          btnTextSpan.innerText = `Подождите ${countdown} сек...`;
-        }
-      }
-      
-      updateTimerDisplay();
-      
-      intervalId = setInterval(function() {
+      interval = setInterval(() => {
         countdown--;
         if (countdown >= 0) {
-          updateTimerDisplay();
+          btnText.innerText = `Подождите ${countdown} сек...`;
         }
-        
         if (countdown < 0) {
-          // Таймер закончился: очищаем интервал, убираем disabled, возвращаем текст
-          clearInterval(intervalId);
-          intervalId = null;
-          
-          // Возвращаем кнопке исходный вид
+          clearInterval(interval);
+          // Включаем кнопку (визуально)
           btn.classList.remove('disabled');
-          if (btnTextSpan) {
-            btnTextSpan.innerText = 'Скачать VPN';
-          }
-          
-          // Теперь разрешаем переход по ссылке (перенаправляем на реальный файл)
+          btnText.innerText = 'Скачать VPN';
+          // Перенаправляем на файл
           window.location.href = realLink;
-          
-          // Сбрасываем флаги на случай повторных нажатий (но ссылка уже открыта)
-          timerActive = false;
-          countdown = 10;
+          timerRunning = false;
         }
-      }, 1000); // каждую секунду
+      }, 1000);
     }
     
-    // Вешаем обработчик на кнопку
-    if (btn) {
-      btn.addEventListener('click', startCountdown);
-    }
+    btn.addEventListener('click', function(e) {
+      // Предотвращаем любые действия по умолчанию (если бы была ссылка)
+      e.preventDefault();
+      // Запускаем таймер, если он ещё не запущен
+      if (!timerRunning && countdown === 10) {
+        startTimer();
+      }
+    });
   })();
 </script>
 
-<noscript>
-  <div style="text-align:center; color:#aaa; margin-top:20px; background:#0d1117; padding:10px; border-radius:20px;">
-    Включите JavaScript для скачивания.
-  </div>
-</noscript>
+<!-- Доп. центрирование баннера -->
+<style>
+  .banner-slot > * { margin: 0 auto !important; display: block !important; text-align: center !important; }
+</style>
 </body>
 </html>
