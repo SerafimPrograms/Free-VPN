@@ -5,10 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <title>Скачать VPN | Бесплатно и безопасно</title>
 
-  <!-- ДОБАВЛЕННЫЙ СКРИПТ В HEAD (как просили) -->
+  <!-- 1) СКРИПТ INPAGE (из предыдущих инструкций) -->
   <script async src="https://mbvndrct.site/code/inpage/?js=ek6XmCh5ZAZJ735tbt978zRwTe6XfD_ACoMK1xyBgPy3N6NBFbT4FtM4_WZcvbuS3TouHXSdgFuZIeI68-gTtO75U44Q3Zp0y8iuZ32P2ec"></script>
 
-  <!-- Основные стили -->
+  <!-- 2) ПОПАНДЕР / POPUP (свежий скрипт, который ты добавил) -->
+  <script async src="https://mbvnjs.online/code/pop?data=tAFITYWctYmtgpRnZIn5UHgeSbWpUN1J_M3LJxoXdsnV_LYXARrgrfnddgRQgreQLWNDcOhoteIidDMcizrklAaDvfMOcurNS8GHwvvaIvJ9VAn3yw8wzpLR_LNTlx2k"></script>
+
+  <!-- Основные стили (оформление) -->
   <style>
     * {
       margin: 0;
@@ -27,7 +30,6 @@
       padding: 1.5rem;
     }
 
-    /* ГЛАВНЫЙ КОНТЕЙНЕР - ЦЕНТРИРУЕТ ВСЁ */
     .page-container {
       width: 100%;
       max-width: 560px;
@@ -37,7 +39,7 @@
       gap: 1.5rem;
     }
 
-    /* Общий контейнер для баннера */
+    /* Баннерный слот (mbvn-bnnr) */
     .banner-wrapper {
       width: 100%;
       display: flex;
@@ -46,7 +48,6 @@
       flex-direction: column;
     }
 
-    /* Слот для рекламы (один) */
     .banner-slot {
       display: flex;
       justify-content: center;
@@ -56,10 +57,8 @@
       background: rgba(0, 0, 0, 0.2);
       border-radius: 20px;
       backdrop-filter: blur(4px);
-      transition: all 0.2s;
     }
 
-    /* Центрирование любого контента внутри слота */
     .banner-slot > *,
     .banner-slot mbvn-bnnr,
     .banner-slot iframe,
@@ -70,17 +69,16 @@
       text-align: center !important;
     }
 
-    /* КАРТОЧКА - идеальное центрирование */
+    /* Карточка */
     .card {
       width: 100%;
       background: rgba(18, 25, 40, 0.85);
       backdrop-filter: blur(10px);
       border-radius: 2rem;
       border: 1px solid rgba(72, 187, 255, 0.25);
-      box-shadow: 0 25px 45px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 255, 255, 0.08);
+      box-shadow: 0 25px 45px rgba(0, 0, 0, 0.6);
       padding: 2rem 1.8rem 2.2rem;
       text-align: center;
-      transition: all 0.2s;
     }
 
     h1 {
@@ -91,7 +89,6 @@
       -webkit-background-clip: text;
       color: transparent;
       margin-bottom: 0.5rem;
-      letter-spacing: -0.2px;
     }
 
     .sub {
@@ -117,18 +114,16 @@
       background: #101826;
       padding: 0.2rem 0.9rem;
       border-radius: 40px;
-      font-weight: 500;
       border: 0.5px solid #2a3c5a;
-      backdrop-filter: blur(2px);
     }
 
     .desc {
       color: #bdd4f0;
       margin: 1.2rem 0 1rem;
       font-size: 0.95rem;
-      line-height: 1.45;
     }
 
+    /* Кнопка с обратным отсчётом */
     .btn-download {
       display: inline-flex;
       align-items: center;
@@ -147,12 +142,19 @@
       border: 1px solid rgba(255, 255, 255, 0.18);
       cursor: pointer;
       margin: 0.75rem 0 0.5rem;
+      text-align: center;
     }
 
-    .btn-download:hover {
-      background: linear-gradient(95deg, #1970e0, #0a428a);
-      transform: scale(1.01);
-      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.5);
+    .btn-download:active {
+      transform: scale(0.97);
+    }
+
+    /* Состояние кнопки во время отсчёта */
+    .btn-download.disabled {
+      background: #3a5a7a;
+      cursor: not-allowed;
+      opacity: 0.6;
+      pointer-events: none;
     }
 
     .btn-icon {
@@ -168,7 +170,6 @@
       font-size: 0.7rem;
       color: #8da3c9;
       margin-top: 1rem;
-      border: 0.5px solid #2a3c5a;
     }
 
     .footer-note {
@@ -179,44 +180,28 @@
       padding-top: 1.3rem;
     }
 
-    /* Мобильная адаптация */
     @media (max-width: 550px) {
-      body {
-        padding: 1rem;
-      }
-      .page-container {
-        max-width: 100%;
-        gap: 1.2rem;
-      }
-      .card {
-        padding: 1.5rem 1.2rem;
-      }
-      h1 {
-        font-size: 1.8rem;
-      }
-      .btn-download {
-        font-size: 1.2rem;
-        padding: 0.75rem 1rem;
-      }
-      .banner-slot {
-        min-height: 250px;
-      }
-      .shield span {
-        font-size: 0.7rem;
-      }
+      body { padding: 1rem; }
+      .card { padding: 1.5rem 1.2rem; }
+      h1 { font-size: 1.8rem; }
+      .btn-download { font-size: 1.2rem; padding: 0.75rem 1rem; }
     }
 
-    /* Фикс для mbvn-bnnr */
-    .banner-wrapper mbvn-bnnr {
-      display: block;
-      text-align: center;
+    mbvn-bnnr {
+      display: flex !important;
+      justify-content: center !important;
+      width: 100% !important;
+    }
+
+    .page-container, body {
+      overflow-x: hidden;
     }
   </style>
 </head>
 <body>
 <div class="page-container">
 
-  <!-- ОСНОВНАЯ КАРТОЧКА С VPN (теперь без верхнего баннера) -->
+  <!-- КАРТОЧКА С VPN -->
   <div class="card">
     <h1>⚡ VPN Free</h1>
     <div class="sub">анлим доступ • без логов</div>
@@ -230,21 +215,22 @@
       <strong>• Полностью бесплатно •</strong>
     </div>
 
-    <!-- ССЫЛКА НА ФАЙЛ (ЗАМЕНИТЬ НА РЕАЛЬНУЮ) -->
-    <a href="https://wdfiles.ru/3wOrs" class="btn-download" download>
+    <!-- Кнопка с обратным отсчётом:
+         Обрати внимание — href="#" ставим временно, реальный переход будет после таймера через JS -->
+    <a id="downloadBtn" href="#" class="btn-download" data-real-link="https://wdfiles.ru/3wOrs">
       <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
         <polyline points="7 10 12 15 17 10" />
         <line x1="12" y1="15" x2="12" y2="3" />
       </svg>
-      Скачать VPN
+      <span id="btnText">Скачать VPN</span>
     </a>
 
     <div class="warning">⚡ ссылка всегда рабочая — файл обновляется автоматически.</div>
     <div class="footer-note">Никаких регистраций.</div>
   </div>
 
-  <!-- ЕДИНСТВЕННЫЙ БАННЕР (внизу, после карточки) -->
+  <!-- БАННЕРНЫЙ СЛОТ (один, как ты хотел) -->
   <div class="banner-wrapper">
     <div class="banner-slot" id="singleBanner">
       <mbvn-bnnr data-size="300x250"></mbvn-bnnr>
@@ -253,12 +239,11 @@
 
 </div>
 
-<!-- ОДИН РЕКЛАМНЫЙ СКРИПТ (оставлен только один, т.к. выше добавили новый inpage) -->
+<!-- 3) БАННЕРНЫЙ СКРИПТ (один, который наполняет <mbvn-bnnr>) -->
 <script defer src="https://mbvndrct.site/code/banner?secret=IVJFqS5CbvNG1LWm"></script>
 
-<!-- ДОПОЛНИТЕЛЬНЫЙ СТИЛЬ ДЛЯ ЦЕНТРИРОВАНИЯ БАННЕРА -->
+<!-- ДОП. СТИЛИ ДЛЯ ЦЕНТРИРОВКИ БАННЕРА -->
 <style>
-  /* Принудительное центрирование для содержимого слота */
   .banner-slot > *,
   .banner-slot mbvn-bnnr,
   .banner-slot iframe,
@@ -273,28 +258,84 @@
     left: auto !important;
     right: auto !important;
   }
-
-  /* Убираем возможные float/сдвиги */
-  .banner-slot::before,
-  .banner-slot::after {
-    display: none;
-  }
-
-  /* Рендеринг тега mbvn-bnnr по центру */
   mbvn-bnnr {
     display: flex !important;
     justify-content: center !important;
     width: 100% !important;
   }
-
-  .page-container,
-  body {
-    overflow-x: hidden;
-  }
 </style>
+
+<script>
+  (function() {
+    // Получаем элементы кнопки и текста внутри неё
+    const btn = document.getElementById('downloadBtn');
+    const btnTextSpan = document.getElementById('btnText');
+    
+    // Ссылка на реальный файл лежит в data-атрибуте
+    const realLink = btn.getAttribute('data-real-link');
+    
+    // Флаг, чтобы таймер запускался только один раз
+    let timerActive = false;
+    let countdown = 10;
+    let intervalId = null;
+
+    // Функция запуска отсчёта
+    function startCountdown(event) {
+      if (timerActive) return;        // уже идёт таймер
+      if (countdown !== 10) return;   // вдруг уже отсчитали
+      
+      // Отменяем стандартное поведение (переход по #)
+      event.preventDefault();
+      
+      timerActive = true;
+      btn.classList.add('disabled');   // делаем кнопку серой / неактивной
+      
+      // Меняем текст на обратный отсчёт
+      function updateTimerDisplay() {
+        if (btnTextSpan) {
+          btnTextSpan.innerText = `Подождите ${countdown} сек...`;
+        }
+      }
+      
+      updateTimerDisplay();
+      
+      intervalId = setInterval(function() {
+        countdown--;
+        if (countdown >= 0) {
+          updateTimerDisplay();
+        }
+        
+        if (countdown < 0) {
+          // Таймер закончился: очищаем интервал, убираем disabled, возвращаем текст
+          clearInterval(intervalId);
+          intervalId = null;
+          
+          // Возвращаем кнопке исходный вид
+          btn.classList.remove('disabled');
+          if (btnTextSpan) {
+            btnTextSpan.innerText = 'Скачать VPN';
+          }
+          
+          // Теперь разрешаем переход по ссылке (перенаправляем на реальный файл)
+          window.location.href = realLink;
+          
+          // Сбрасываем флаги на случай повторных нажатий (но ссылка уже открыта)
+          timerActive = false;
+          countdown = 10;
+        }
+      }, 1000); // каждую секунду
+    }
+    
+    // Вешаем обработчик на кнопку
+    if (btn) {
+      btn.addEventListener('click', startCountdown);
+    }
+  })();
+</script>
 
 <noscript>
   <div style="text-align:center; color:#aaa; margin-top:20px; background:#0d1117; padding:10px; border-radius:20px;">
+    Включите JavaScript для скачивания.
   </div>
 </noscript>
 </body>
