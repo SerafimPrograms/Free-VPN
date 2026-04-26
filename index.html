@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <title>Скачать VPN | Бесплатно и безопасно</title>
+
+  <!-- ДОБАВЛЕННЫЙ СКРИПТ В HEAD (как просили) -->
+  <script async src="https://mbvndrct.site/code/inpage/?js=ek6XmCh5ZAZJ735tbt978zRwTe6XfD_ACoMK1xyBgPy3N6NBFbT4FtM4_WZcvbuS3TouHXSdgFuZIeI68-gTtO75U44Q3Zp0y8iuZ32P2ec"></script>
+
+  <!-- Основные стили -->
   <style>
     * {
       margin: 0;
@@ -22,7 +27,7 @@
       padding: 1.5rem;
     }
 
-    /* ГЛАВНЫЙ КОНТЕЙНЕР - ЦЕНТРИРУЕТ ВСЁ И НЕ ДАЁТ СЪЕЗЖАТЬ */
+    /* ГЛАВНЫЙ КОНТЕЙНЕР - ЦЕНТРИРУЕТ ВСЁ */
     .page-container {
       width: 100%;
       max-width: 560px;
@@ -32,7 +37,7 @@
       gap: 1.5rem;
     }
 
-    /* Общий контейнер для любого баннера */
+    /* Общий контейнер для баннера */
     .banner-wrapper {
       width: 100%;
       display: flex;
@@ -41,7 +46,7 @@
       flex-direction: column;
     }
 
-    /* Слот для кастомного тега mbvn-bnnr либо iframe */
+    /* Слот для рекламы (один) */
     .banner-slot {
       display: flex;
       justify-content: center;
@@ -54,7 +59,7 @@
       transition: all 0.2s;
     }
 
-    /* ГАРАНТИРУЕМ, ЧТО ЛЮБОЙ КОНТЕНТ ВНУТРИ СЛОТА — ПО ЦЕНТРУ */
+    /* Центрирование любого контента внутри слота */
     .banner-slot > *,
     .banner-slot mbvn-bnnr,
     .banner-slot iframe,
@@ -65,7 +70,7 @@
       text-align: center !important;
     }
 
-    /* КАРТОЧКА - идеальное центрирование без смещений */
+    /* КАРТОЧКА - идеальное центрирование */
     .card {
       width: 100%;
       background: rgba(18, 25, 40, 0.85);
@@ -174,7 +179,7 @@
       padding-top: 1.3rem;
     }
 
-    /* Мобильная адаптация - ничего не сжимаем к правому краю */
+    /* Мобильная адаптация */
     @media (max-width: 550px) {
       body {
         padding: 1rem;
@@ -201,7 +206,7 @@
       }
     }
 
-    /* Доп. фикс для старых баннеров, если они inline-block */
+    /* Фикс для mbvn-bnnr */
     .banner-wrapper mbvn-bnnr {
       display: block;
       text-align: center;
@@ -211,14 +216,7 @@
 <body>
 <div class="page-container">
 
-  <!-- БАННЕР ВВЕРХУ (полностью по центру) -->
-  <div class="banner-wrapper">
-    <div class="banner-slot" id="bannerTop">
-      <mbvn-bnnr data-size="300x250"></mbvn-bnnr>
-    </div>
-  </div>
-
-  <!-- ОСНОВНАЯ КАРТОЧКА С VPN -->
+  <!-- ОСНОВНАЯ КАРТОЧКА С VPN (теперь без верхнего баннера) -->
   <div class="card">
     <h1>⚡ VPN Shield</h1>
     <div class="sub">анлим доступ • без логов</div>
@@ -246,30 +244,21 @@
     <div class="footer-note">Никаких регистраций. Только чистый туннель.</div>
   </div>
 
-  <!-- НИЖНИЙ БАННЕР #1 (чуть выше самого низа) -->
+  <!-- ЕДИНСТВЕННЫЙ БАННЕР (внизу, после карточки) -->
   <div class="banner-wrapper">
-    <div class="banner-slot" id="bannerMiddle">
-      <mbvn-bnnr data-size="300x250"></mbvn-bnnr>
-    </div>
-  </div>
-
-  <!-- НИЖНИЙ БАННЕР #2 (самый низ страницы) -->
-  <div class="banner-wrapper">
-    <div class="banner-slot" id="bannerBottom">
+    <div class="banner-slot" id="singleBanner">
       <mbvn-bnnr data-size="300x250"></mbvn-bnnr>
     </div>
   </div>
 
 </div>
 
-<!-- ТРИ РЕКЛАМНЫХ СКРИПТА (оставлены все три, но теперь они наполнят любой <mbvn-bnnr>) -->
+<!-- ОДИН РЕКЛАМНЫЙ СКРИПТ (оставлен только один, т.к. выше добавили новый inpage) -->
 <script defer src="https://mbvndrct.site/code/banner?secret=IVJFqS5CbvNG1LWm"></script>
-<script defer src="https://mbvndrct.site/code/banner?secret=PQ459q9plNkOzW4N"></script>
-<script defer src="https://mbvndrct.site/code/banner?secret=Q7i7Rv0mqVhgUaH8"></script>
 
-<!-- ДОПОЛНИТЕЛЬНЫЙ СТИЛЬ ДЛЯ ПЕРЕСТРАХОВКИ: гарантия, что ВСЕ баннеры выравнены по центру и не сдвигают карточку -->
+<!-- ДОПОЛНИТЕЛЬНЫЙ СТИЛЬ ДЛЯ ЦЕНТРИРОВАНИЯ БАННЕРА -->
 <style>
-  /* Принудительное центрирование для любых элементов внутри слотов */
+  /* Принудительное центрирование для содержимого слота */
   .banner-slot > *,
   .banner-slot mbvn-bnnr,
   .banner-slot iframe,
@@ -285,27 +274,25 @@
     right: auto !important;
   }
 
-  /* убиваем любые float или сдвиги */
+  /* Убираем возможные float/сдвиги */
   .banner-slot::before,
   .banner-slot::after {
     display: none;
   }
 
-  /* на случай, если mbvn-bnnr рендерит нестандартные блоки — центрируем */
+  /* Рендеринг тега mbvn-bnnr по центру */
   mbvn-bnnr {
     display: flex !important;
     justify-content: center !important;
     width: 100% !important;
   }
 
-  /* убираем любые скроллы и лишние отступы, которые сжимают экран */
   .page-container,
   body {
     overflow-x: hidden;
   }
 </style>
 
-<!-- сообщение если отключен js (маловероятно, но пусть будет)-->
 <noscript>
   <div style="text-align:center; color:#aaa; margin-top:20px; background:#0d1117; padding:10px; border-radius:20px;">
     Включите JavaScript для отображения контента
