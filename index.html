@@ -2,19 +2,8 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <title>Скачать VPN | Бесплатно и безопасно</title>
-<!-- Места для рекламы -->
-<mbvn-bnnr data-size="300x250"></mbvn-bnnr>
-<mbvn-bnnr data-size="300x250"></mbvn-bnnr>
-<mbvn-bnnr data-size="300x250"></mbvn-bnnr>
-
-<!-- Это твои скрипты, которые наполнят эти места рекламой -->
-<script defer src="https://mbvndrct.site/code/banner?secret=IVJFqS5CbvNG1LWm"></script>
-<script defer src="https://mbvndrct.site/code/banner?secret=PQ459q9plNkOzW4N"></script>
-<script defer src="https://mbvndrct.site/code/banner?secret=Q7i7Rv0mqVhgUaH8"></script>
-
-
   <style>
     * {
       margin: 0;
@@ -27,19 +16,49 @@
       font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
       min-height: 100vh;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
       padding: 1.5rem;
     }
 
+    /* Главный контейнер для центрирования карточки и рекламных блоков */
+    .main-container {
+      width: 100%;
+      max-width: 620px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    /* Баннерный контейнер — общие стили для всех, красивое выравнивание */
+    .banner-slot {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 24px;
+      padding: 0.5rem;
+      min-height: 270px;
+      transition: all 0.2s;
+    }
+
+    /* Чтобы баннеры не разваливали сетку на мобилках */
+    .banner-slot mbvn-bnnr {
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* КАРТОЧКА (без изменений, только адаптив) */
     .card {
-      max-width: 520px;
       width: 100%;
       background: rgba(18, 25, 40, 0.85);
       backdrop-filter: blur(10px);
       border-radius: 2rem;
       border: 1px solid rgba(72, 187, 255, 0.2);
-      box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 255, 255, 0.05);
       padding: 2rem 1.8rem 2.2rem;
       text-align: center;
     }
@@ -52,6 +71,7 @@
       -webkit-background-clip: text;
       color: transparent;
       margin-bottom: 0.5rem;
+      letter-spacing: -0.3px;
     }
 
     .sub {
@@ -77,6 +97,7 @@
       background: #101826;
       padding: 0.2rem 0.8rem;
       border-radius: 40px;
+      font-weight: 500;
       border: 0.5px solid #2a3c5a;
     }
 
@@ -84,6 +105,7 @@
       color: #bdd4f0;
       margin: 1.5rem 0 1rem;
       font-size: 0.95rem;
+      line-height: 1.45;
     }
 
     .btn-download {
@@ -92,7 +114,9 @@
       justify-content: center;
       gap: 12px;
       background: linear-gradient(95deg, #0f5fcf, #0a3a7a);
+      border: none;
       padding: 1rem 2rem;
+      margin: 1rem 0 0.5rem;
       width: 100%;
       border-radius: 60px;
       font-size: 1.4rem;
@@ -102,12 +126,158 @@
       transition: 0.2s;
       box-shadow: 0 8px 18px rgba(0, 20, 50, 0.5);
       border: 1px solid rgba(255, 255, 255, 0.15);
+      cursor: pointer;
     }
 
     .btn-download:hover {
       background: linear-gradient(95deg, #1970e0, #0a428a);
       transform: scale(1.01);
+      box-shadow: 0 12px 22px rgba(0, 0, 0, 0.4);
+      text-decoration: none;
     }
+
+    .btn-download:active {
+      transform: scale(0.98);
+    }
+
+    .btn-icon {
+      width: 26px;
+      height: 26px;
+      filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2));
+    }
+
+    .warning {
+      background: #0c1422b3;
+      border-radius: 20px;
+      padding: 0.6rem;
+      font-size: 0.7rem;
+      color: #8da3c9;
+      margin-top: 1rem;
+    }
+
+    .footer-note {
+      font-size: 0.7rem;
+      color: #5e7492;
+      margin-top: 1.8rem;
+      border-top: 1px solid #1e2a3e;
+      padding-top: 1.2rem;
+    }
+
+    @media (max-width: 520px) {
+      .main-container {
+        gap: 1rem;
+      }
+      .card {
+        padding: 1.5rem;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      .btn-download {
+        font-size: 1.2rem;
+        padding: 0.8rem 1rem;
+      }
+      .banner-slot {
+        padding: 0.2rem;
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="main-container">
+
+  <!-- ВЕРХНИЙ БАННЕР (над карточкой) -->
+  <div class="banner-slot" id="topBannerSlot">
+    <mbvn-bnnr data-size="300x250"></mbvn-bnnr>
+  </div>
+
+  <!-- ОСНОВНАЯ КАРТОЧКА С VPN -->
+  <div class="card">
+    <h1>⚡ VPN Shield</h1>
+    <div class="sub">анлим доступ • без логов</div>
+    <div class="shield">
+      <span>🔒 AES-256</span>
+      <span>🌍 70+ стран</span>
+      <span>🚀 no speed limits</span>
+    </div>
+    <div class="desc">
+      Нажмите кнопку, чтобы получить актуальную сборку VPN.<br>
+      <strong>• Полностью бесплатно •</strong>
+    </div>
+
+    <!-- ССЫЛКА НА ФАЙЛ (ЗАМЕНИТЬ) -->
+    <a href="https://your-server.com/vpn-file.zip" class="btn-download" download>
+      <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+        <polyline points="7 10 12 15 17 10" />
+        <line x1="12" y1="15" x2="12" y2="3" />
+      </svg>
+      Скачать VPN
+    </a>
+
+    <div class="warning">⚡ ссылка всегда рабочая — файл обновляется автоматически.</div>
+    <div class="footer-note">Никаких регистраций. Только чистый туннель.</div>
+  </div>
+
+  <!-- НИЖНИЙ БАННЕР №1 (чуть выше второго нижнего) -->
+  <div class="banner-slot" id="bottomBanner1">
+    <mbvn-bnnr data-size="300x250"></mbvn-bnnr>
+  </div>
+
+  <!-- НИЖНИЙ БАННЕР №2 (самый низ страницы) -->
+  <div class="banner-slot" id="bottomBanner2">
+    <mbvn-bnnr data-size="300x250"></mbvn-bnnr>
+  </div>
+
+</div>
+
+<!-- 
+  ТРИ рекламных скрипта — они наполняют ВСЕ теги <mbvn-bnnr> 
+  (каждый скрипт может создавать свой пул объявлений, 
+  но чтобы не дублировать лишнее, оставляем все три как у тебя было,
+  они наполнят пустые слоты автоматически).
+-->  
+<script defer src="https://mbvndrct.site/code/banner?secret=IVJFqS5CbvNG1LWm"></script>
+<script defer src="https://mbvndrct.site/code/banner?secret=PQ459q9plNkOzW4N"></script>
+<script defer src="https://mbvndrct.site/code/banner?secret=Q7i7Rv0mqVhgUaH8"></script>
+
+<!-- 
+  ✅ ДОПОЛНИТЕЛЬНЫЙ СТИЛЬ для баннеров, чтобы они не уродовали раскладку 
+  (скрипты создают iframe/css — этот блок заставляет всё быть по центру)
+-->
+<style>
+  /* Автоматически центрируем любую рекламу, которая подгружается в слотах */
+  .banner-slot mbvn-bnnr,
+  .banner-slot iframe,
+  .banner-slot ins,
+  .banner-slot div[style*="width"] {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+    text-align: center !important;
+  }
+  /* Для любых динамически вставленных баннеров */
+  .banner-slot > * {
+    margin: 0 auto !important;
+    display: block !important;
+    max-width: 100%;
+  }
+  /* сами скрипты не ломают раскладку */
+  script[defer] {
+    display: none;
+  }
+</style>
+
+<!-- 
+  ФИКС для старых браузеров / нестандартного поведения:
+  гарантируем, что контейнеры не схлопнутся, если реклама грузится долго.
+-->
+<noscript>
+  <div style="text-align:center; color:#aaa; padding:1rem;">Для отображения рекламы включите JavaScript</div>
+</noscript>
+</body>
+</html>    }
 
     .btn-icon {
       width: 26px;
